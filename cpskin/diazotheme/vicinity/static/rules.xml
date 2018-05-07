@@ -27,6 +27,7 @@
 
   <!-- Our own rules -->
   <xi:include href="/++theme++cpskin.diazotheme.vicinity/rules/header.xml"/>
+  <xi:include href="/++theme++cpskin.diazotheme.vicinity/rules/media.xml"/>
   
 
   <replace css:theme="body" css:content="body" />
