@@ -314,6 +314,8 @@ dl.actionMenu a, dl.actionMenu div{
 //MULTIPLE
 #flex.slider-multiple::before {
     background: @homepage-event-bg url("../images/agenda_bg.png") no-repeat;
+    background-position: 50% 0;
+    background-size: contain;
     content: "";
     width: 300%;
     height: 100%;
@@ -337,14 +339,17 @@ dl.actionMenu a, dl.actionMenu div{
 }
 #flex.slider-multiple .carousel .flex-viewport ul {
     height: 100% !important;
+    transform: translate3d(-813px, 0px, 0px);
 }
 #flex.slider-multiple .carousel .flex-viewport li {
-    height: 100% !important;
+    border: none;
+    height: auto !important;
     text-align: center;
     display: flex !important;
     flex-direction: column;
-    margin-right: 6em;
-    width: 1.5% !important;
+    margin-right: 2em;
+    width: 1.75% !important;
+    max-width: 1.75%;
 }
 #content #flex.slider-multiple .carousel .flex-viewport li a {
     color: #000 !important;
@@ -404,6 +409,9 @@ div#portal-column-content.position-1\:4 .slider-multiple::before{
 #flex.slider-multiple {
     position: relative;
 }
+.slider-multiple .flex-direction-nav{
+    display: block;
+}
 #accueil #flex.slider-multiple .flex-prev {
     margin-top:0;
     top: 18%;
@@ -425,10 +433,10 @@ div#portal-column-content.position-1\:4 .slider-multiple::before{
     order: 3;
 }
 .slider-multiple .flex-direction-nav a::before{
-    content: url("../images/slideshow_previous.png");   
+    content: url("../images/agenda_previous.png");   
 }
 .slider-multiple .flex-direction-nav a.flex-next::before{
-    content: url("../images/slideshow_next.png");
+    content: url("../images/agenda_next.png");
 }
 .slider-multiple .flex-direction-nav .flex-prev{
     left: 0;
@@ -444,10 +452,16 @@ div#portal-column-content.position-1\:4 .slider-multiple::before{
     width: 2em;
 }
 #visual-portal-wrapper #content .slider-multiple .flex-direction-nav .flex-prev{
-    margin: 0 0 0 -12em;
+    margin: -7em 0 0 -12em;
 }
 #visual-portal-wrapper #content .slider-multiple .flex-direction-nav .flex-next{
     margin: -7em -6em 0 0;
+    left: 100%;
+}
+.slider-multiple .flex-direction-nav li {
+    position: absolute;
+    width: 100%;
+    top: 49%;
 }
 .slider-multiple .read-next-link a {
     visibility: hidden;
@@ -981,4 +995,9 @@ div#portal-column-content.position-1\:4 .slider-multiple::before{
 #navWrapper .portal-tab-description {
     text-transform: none;
     font-size: 1em;
+}
+//FACETED
+//widget
+#visual-portal-wrapper #faceted-form .select2-container .select2-choice{
+    background: @faceted-widget-bg;
 }
