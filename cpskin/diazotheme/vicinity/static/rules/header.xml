@@ -2,30 +2,43 @@
 <rules xmlns="http://namespaces.plone.org/diazo"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:css="http://namespaces.plone.org/diazo/css">
-  <rules>
+  
+ <!-- Standard Header / banner -->
+  <rules if-not="$isinminisitemode">
     <replace css:content-children="#portal-header">
-      <div id="top-actions-search">
-        <div id="top-actions-search-inner">
-          <div id="top-actions-search-wrapper">
-            <xsl:copy-of select= "//*[@id='top-menu-actions']"/>
-            <xsl:copy-of select= "//*[@id='portal-personaltools-wrapper']"/>
-            <div id="top-languages">
-              <xsl:apply-templates select="./*[@id='portal-languageselector']" />
+      <div class="minisite-collapsable">
+        <div id="top-actions-search">
+          <div id="top-actions-search-inner">
+            <div id="top-actions-search-wrapper">
+              <xsl:copy-of select= "//*[@id='top-menu-actions']"/>
+              <xsl:copy-of select= "//*[@id='portal-personaltools-wrapper']"/>
+              <div id="top-languages">
+                <xsl:apply-templates select="./*[@id='portal-languageselector']" />
+              </div>
+              <xsl:copy-of select= "//*[@id='portal-searchbox']"/>
             </div>
-            <xsl:copy-of select= "//*[@id='portal-searchbox']"/>
+          </div>
+        </div>
+        <div id="top-navigation">
+          <div id="top-navigation-inner">
+            <div id="top-logo">
+              <div id="top-logo-inner">
+                <xsl:apply-templates select="./*[@id='portal-logo']" />
+              </div> 
+            </div>
+            <xsl:apply-templates select="./*[@id='portal-globalnav']" />
           </div>
         </div>
       </div>
-      <div id="top-navigation">
-        <div id="top-navigation-inner">
-          <div id="top-logo">
-            <div id="top-logo-inner">
-              <xsl:apply-templates select="./*[@id='portal-logo']" />
-            </div> 
-          </div>
-          <xsl:apply-templates select="./*[@id='portal-globalnav']" />
+     <xsl:if test="($ms_horizontal_navigation_any_mode)">
+        <div id="minisite-navigation-wrapper">
+          <div id="minisite-navigation-inner">
+              <xsl:copy-of select="//*[@id='minisite-logo']" />
+              <xsl:copy-of select="//*[@id='minisite-actions']" />
+              <xsl:copy-of select="//*[@id='minisite-globalnav']" />
+          </div> 
         </div>
-      </div>
+      </xsl:if>
       <xsl:apply-templates select="./*[not(@id) or (@id!='portal-personaltools-wrapper'
                                                               and @id!='portal-searchbox'
                                                               and @id!='social-viewlet'
@@ -35,5 +48,33 @@
                                                               and @id!='portal-globalnav')]"/>
     </replace>
     <drop css:content="#portaltab-index_html" />
+    <drop css:content="#viewlet-above-content #viewlet-minisite" />
+    <drop css:content="#minisite-logo" />
+    <drop css:content="#minisite-actions" />
+    <drop css:content="#container-minisite-globalnav" />
+    <drop css:content="#portal-footer-wrapper #portal-siteactions" />
+    
   </rules>
+  
+   <!-- Header specific to minisite mode -->
+  <rules if="$isinminisitemode">
+      <replace css:content-children="#portal-header">
+          <div id="top-languages">
+            <xsl:copy-of select="//*[@id='portal-languageselector']" />
+          </div>
+          <div id="minisite-navigation-wrapper">
+            <div id="minisite-navigation-inner">
+              <xsl:copy-of select="//*[@id='minisite-logo']" />
+              <xsl:copy-of select="//*[@id='minisite-actions']" />
+              <xsl:copy-of select="//*[@id='minisite-globalnav']" />
+          </div> 
+        </div> 
+      </replace>
+      <drop css:content="#viewlet-above-content #viewlet-minisite" />
+      <drop css:content="#portal-breadcrumbs" />
+      <drop css:content="#minisite-logo" />
+      <drop css:content="#minisite-actions" />
+      <drop css:content="#portal-footer-wrapper #portal-siteactions" />
+  </rules>
+  
 </rules>
