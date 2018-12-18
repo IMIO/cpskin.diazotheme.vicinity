@@ -5,6 +5,8 @@ Changelog
 0.2 (unreleased)
 ----------------
 
+-Add "top slider" : WEB-2407
+
 -Add css for responsive.
  [mgennart]
  
