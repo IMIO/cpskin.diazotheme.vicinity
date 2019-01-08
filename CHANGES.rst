@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.2 (unreleased)
+0.2 (2019-01-08)
 ----------------
 
 - Add top slider : WEB-2407
