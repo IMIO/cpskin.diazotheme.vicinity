@@ -1,6 +1,10 @@
 body, h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
     font-family: roboto;
 }
+#edit-bar{
+    position: relative;
+    z-index: 3;
+}
 //Header
 .cc-cookies {
     background: rgba(2,74,85,0.95);
@@ -180,6 +184,76 @@ body, h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
 #portal-personaltools{
     font-size: 100%;
 }
+//SLIDER TOP
+.slider-top {
+    max-width: 1920px;
+    margin: 0 auto;
+    .flexslider .flex-caption ,
+    #slider-a-la-une.flexslider .flex-caption {
+        background-color: transparent;
+        height: 100%;
+        margin-left: 18%;
+        margin-top: -25%;
+        opacity: 1;
+        text-align: right;
+        text-shadow: 2px 3px 8px #333;
+        width: 20%;
+    }
+    .flexslider a{
+        color: @font-white !important;
+    }
+    .read-next-link{
+        background: @tousime-nav-bg;
+        border-top-left-radius: 16% 59%;
+        border-top-right-radius: 16% 59%;
+        border-bottom-right-radius: 16% 59%;
+        border-bottom-left-radius: 16% 59%;
+        display: block;
+        float: left;
+        font-weight: 800;
+        margin: -15% 0 0 -71%;
+        padding: 1% 0;
+        text-align: center;
+        text-transform: uppercase;
+        width: 10%;
+    }
+    #slider-a-la-une .read-next-link{
+        display: block;
+    }
+    .slider .flex-direction-nav a::before{
+        background: url("../images/agenda_previous.png") no-repeat;
+        content:"";
+        font-size: 50px;
+        margin-left: -0.2em;
+        height: 88px;
+        width: 88px;
+    }
+    .slider .flex-direction-nav a.flex-next::before{
+        background: url("../images/agenda_next.png") no-repeat;
+        content: "";
+        margin-left: 0em;
+    }
+    .slider .flex-direction-nav .flex-prev{
+        left: 0;
+    }
+    .slider .flex-direction-nav .flex-next{
+        right: 0;
+    }
+    
+}
+.slider-top .slider .flex-direction-nav a,
+.slider-top .slider .flex-direction-nav a:link{
+    color: transparent !important;
+    opacity: 1;
+    padding: .5em 4.5em 4.5em 4.5em !important;
+    width: 2em;
+}
+#visual-portal-wrapper #content .slider-top .slider .flex-direction-nav .flex-prev{
+    margin: 5em 0 0 2em;
+}
+#visual-portal-wrapper #content .slider-top .slider .flex-direction-nav .flex-next{
+    margin: -7em -3em 0 0;
+}
 //Navigation
 #top-navigation{
     background: @header-nav-bg;
@@ -322,7 +396,7 @@ dl.actionMenu a, dl.actionMenu div{
 #visual-portal-wrapper #content .slider-carousel .flexslider a:link{
     color: @font-black !important;
 }
-#slider-a-la-une .read-next-link{
+.slider-carousel #slider-a-la-une .read-next-link{
     display: block;
     order: 1;
     position: relative;
@@ -1163,6 +1237,9 @@ div#portal-column-content.position-1\:4 .slider-multiple::before{
     #portal-top #cpskin-banner img {
         margin: -4.8em 0 auto;
     }
+    .actualites {
+        margin: -10% 0 0 0;
+    }
 }
 .in-minisite-out-portal{
     #portal-top #cpskin-banner,
@@ -1181,7 +1258,10 @@ div#portal-column-content.position-1\:4 .slider-multiple::before{
         a {
             margin: 0.5em;
         }
-     }
+    }
+    .actualites {
+        margin: -10% 0 0 0;
+    }
 }
 .subsection-tourisme-office-du-tourisme{
     &.in-minisite-out-portal{
