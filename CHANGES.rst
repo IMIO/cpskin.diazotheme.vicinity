@@ -5,6 +5,9 @@ Changelog
 0.3 (unreleased)
 ----------------
 
+- Add css for dropdown menu for mini site : MWEBOTT-2
+  [mgennart]
+
 - Add dropdown menu for mini site : WEB-2928
   [mgennart]
 

@@ -10,7 +10,7 @@
     <xsl:copy-of select="//div[contains(@class, 'slider-top')]" />
   </after>
   <drop css:content="#accueil .slider-top" />
-  
+  <drop css:content=".minisite-dropdown-menu ul.navTreeLevel2" />
  <!-- Standard Header / banner -->
   <rules if-not="$isinminisitemode">
     <replace css:content-children="#portal-header">
@@ -61,7 +61,6 @@
     <drop css:content="#minisite-logo" />
     <drop css:content="#minisite-actions" />
     <drop css:content="#container-minisite-globalnav" />
-    <drop css:content=".minisite-dropdown-menu-container" />
     <drop css:content="#portal-footer-wrapper #portal-siteactions" />
     
   </rules>
@@ -77,6 +76,7 @@
               <xsl:copy-of select="//*[@id='minisite-logo']" />
               <xsl:copy-of select="//*[@id='minisite-actions']" />
               <xsl:copy-of select="//*[@id='minisite-globalnav']" />
+              <xsl:copy-of select="//*[@class='minisite-dropdown-menu']" />
           </div> 
         </div> 
       </replace>
@@ -85,6 +85,9 @@
       <drop css:content="#minisite-logo" />
       <drop css:content="#minisite-actions" />
       <drop css:content="#portal-footer-wrapper #portal-siteactions" />
+      <drop css:content=".minisite-dropdown-menu-container" />
   </rules>
+  <drop css:content=".minisite-dropdown-menu-container" />
+  
   
 </rules>
