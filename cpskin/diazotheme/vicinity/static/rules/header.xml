@@ -44,6 +44,7 @@
               <xsl:copy-of select="//*[@id='minisite-logo']" />
               <xsl:copy-of select="//*[@id='minisite-actions']" />
               <xsl:copy-of select="//*[@id='minisite-globalnav']" />
+              <xsl:copy-of select="//*[@class='minisite-dropdown-menu']" />
           </div> 
         </div>
       </xsl:if>
@@ -60,6 +61,7 @@
     <drop css:content="#minisite-logo" />
     <drop css:content="#minisite-actions" />
     <drop css:content="#container-minisite-globalnav" />
+    <drop css:content=".minisite-dropdown-menu-container" />
     <drop css:content="#portal-footer-wrapper #portal-siteactions" />
     
   </rules>

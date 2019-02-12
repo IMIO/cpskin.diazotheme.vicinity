@@ -5,7 +5,8 @@ Changelog
 0.3 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Add dropdown menu for mini site : WEB-2928
+  [mgennart]
 
 
 0.2 (2019-01-08)
