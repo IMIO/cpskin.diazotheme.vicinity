@@ -5,6 +5,9 @@ Changelog
 0.3 (unreleased)
 ----------------
 
+- Fix menus order : portal dropdown menu is before minisite menu : MWEBOTT-20
+  [laulaz]
+
 - Add css for dropdown menu for mini site : MWEBOTT-2
   [mgennart]
 

@@ -38,16 +38,6 @@
           </div>
         </div>
       </div>
-     <xsl:if test="($ms_horizontal_navigation_any_mode)">
-        <div id="minisite-navigation-wrapper">
-          <div id="minisite-navigation-inner">
-              <xsl:copy-of select="//*[@id='minisite-logo']" />
-              <xsl:copy-of select="//*[@id='minisite-actions']" />
-              <xsl:copy-of select="//*[@id='minisite-globalnav']" />
-              <xsl:copy-of select="//*[@class='minisite-dropdown-menu']" />
-          </div> 
-        </div>
-      </xsl:if>
       <xsl:apply-templates select="./*[not(@id) or (@id!='portal-personaltools-wrapper'
                                                               and @id!='portal-searchbox'
                                                               and @id!='social-viewlet'
@@ -55,6 +45,16 @@
                                                               and @id!='top-menu-actions'
                                                               and @id!='portal-logo'
                                                               and @id!='portal-globalnav')]"/>
+      <xsl:if test="($ms_horizontal_navigation_any_mode)">
+         <div id="minisite-navigation-wrapper">
+           <div id="minisite-navigation-inner">
+               <xsl:copy-of select="//*[@id='minisite-logo']" />
+               <xsl:copy-of select="//*[@id='minisite-actions']" />
+               <xsl:copy-of select="//*[@id='minisite-globalnav']" />
+               <xsl:copy-of select="//*[@class='minisite-dropdown-menu']" />
+           </div> 
+         </div>
+       </xsl:if>
     </replace>
     <drop css:content="#portaltab-index_html" />
     <drop css:content="#viewlet-above-content #viewlet-minisite" />
