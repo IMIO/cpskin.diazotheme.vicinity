@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.3 (unreleased)
+0.3 (2019-03-04)
 ----------------
 
 - Fix menus order : portal dropdown menu is before minisite menu : MWEBOTT-20
