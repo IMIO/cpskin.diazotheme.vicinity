@@ -5,7 +5,8 @@ Changelog
 0.4 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- CSS fixes for minisite dropdown menu
+  [laulaz]
 
 
 0.3 (2019-03-04)
