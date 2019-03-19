@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Installer for the cpskin.diazotheme.vicinity package."""
 
-version = '0.4.dev0'
+version = '0.4'
 
 from setuptools import find_packages
 from setuptools import setup

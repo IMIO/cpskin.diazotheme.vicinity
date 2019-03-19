@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.4 (unreleased)
+0.4 (2019-03-19)
 ----------------
 
 - CSS fixes for Vincinity
