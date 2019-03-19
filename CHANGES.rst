@@ -5,6 +5,9 @@ Changelog
 0.4 (unreleased)
 ----------------
 
+- CSS fixes for Vincinity
+  [osnickers]
+
 - CSS fixes for minisite dropdown menu
   [laulaz]
 

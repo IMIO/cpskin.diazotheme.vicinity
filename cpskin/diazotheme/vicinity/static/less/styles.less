@@ -1,9 +1,6 @@
 body, h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
     font-family: roboto;
 }
-#edit-bar {
-    margin-bottom: 10em;
-}
 //Header
 .cc-cookies {
     background: rgba(2,74,85,0.95);
@@ -292,18 +289,17 @@ body, h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
 //submenu
 ul.navTreeLevel0::before,
 .sf-menu ul.navTreeLevel1::before{
-    background: transparent;
+    background: #107e8f;
     content: "";
-    left: -31%;
+    left: -100%;
     position: absolute;
     top: 0;
-    height: 100%;
-    width: 200%;
+    bottom: 0;
+    width: 300%;
     z-index: -1;
 }
 ul.navTreeLevel0{
     background: @nav-sub-bg;
-    position: absolute;
     width: 100%;
 }
 ul.navTreeLevel0 li a{
@@ -1191,17 +1187,20 @@ div#portal-column-content.position-1\:4 .slider-multiple::before{
 //MINI SITE
 #minisite-navigation-wrapper{
     background: @tousime-nav-bg;
-    max-width: 100%;
+    width: 100%;
+    float:left;
 }
 #minisite-actions ul{
     display: inline-block;
     float: none;
-    padding: 0.75em 0 1.5em 0;
+    padding: 0;
 }
 #minisite-navigation-inner{
     background: transparent;
     display: table;
     padding: 1em 0;
+    max-width: 1200px;
+    width:100%;
 }
 #minisite-globalnav{
     background: transparent;
@@ -1228,9 +1227,9 @@ div#portal-column-content.position-1\:4 .slider-multiple::before{
     float: none;
     padding-left: 0;
     position: relative;
-    vertical-align: top;
+    vertical-align: middle;
 }
-.in-minisite-in-portal{
+/*.in-minisite-in-portal{
     #portal-top #cpskin-banner,
     #portal-top #cpskin-banner img {
         margin: -4.8em 0 auto;
@@ -1238,12 +1237,12 @@ div#portal-column-content.position-1\:4 .slider-multiple::before{
     .actualites {
         margin: -10% 0 0 0;
     }
-}
+}*/
 .in-minisite-out-portal{
-    #portal-top #cpskin-banner,
+/*   #portal-top #cpskin-banner,
     #portal-top #cpskin-banner img {
         margin: -4.8em 0 auto;
-    }
+    }*/
     #top-languages{
         margin: 0 auto;
     }
@@ -1257,9 +1256,9 @@ div#portal-column-content.position-1\:4 .slider-multiple::before{
             margin: 0.5em;
         }
     }
-    .actualites {
+/*    .actualites {
         margin: -10% 0 0 0;
-    }
+    }*/
 }
 .subsection-tourisme-office-du-tourisme{
     &.in-minisite-out-portal{
@@ -1267,11 +1266,12 @@ div#portal-column-content.position-1\:4 .slider-multiple::before{
         #portal-header{
             background: transparent;
         }
-         #portal-top #cpskin-banner,
+/*         #portal-top #cpskin-banner,minisite-dropdown-menu ul.navTreeLevel2
          #portal-top #cpskin-banner img {
             margin: -6.8em 0 auto;
-        }
+        }*/
     }
+
     //HEADER
     #minisite-actions{
         a[href*="facebook"]{
@@ -1313,9 +1313,9 @@ div#portal-column-content.position-1\:4 .slider-multiple::before{
     #content .evenements .voir-tout{
         background: @tourisme-green;
     }
-    #portal-top #cpskin-banner, #portal-top #cpskin-banner img {
+/*    #portal-top #cpskin-banner, #portal-top #cpskin-banner img {
         margin: -4.8em 0 auto;
-    }
+    }*/
 }
 //DROPDOWN MENU MINI SITE
 .minisite-dropdown-menu{
@@ -1332,13 +1332,9 @@ div#portal-column-content.position-1\:4 .slider-multiple::before{
         background: @ms-sub-menu-bg;
         top: 185%;
     }
-    ul.navTreeLevel1 > li{
-        width: 50%;
-        > a{
+    ul.navTreeLevel1 > li > a{
             color: @font-white;
             display: inline-block;
-            width: 100%;
-        }
     }
     .navTreeLevel1 li a{
         transition: all 0.25s ease-in-out;
@@ -1349,13 +1345,5 @@ div#portal-column-content.position-1\:4 .slider-multiple::before{
     }
     ul.navTreeLevel1.mega-sub > li > a::before{
         border-color: rgba(255,255,255,0.8);
-    }
-    ul.navTreeLevel2{
-        margin: 10px 0 0 0;
-        li a{
-            text-transform: lowercase;
-            display: inline-block;
-            width: 100%;
-        }
     }
 }
